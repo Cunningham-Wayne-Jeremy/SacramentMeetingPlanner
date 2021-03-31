@@ -21,5 +21,6 @@ namespace SacramentMeetingPlanner.Models
         public string ClosingPrayer { get; set; }
         public Array Speakers { get; set; }
         public string SpeakerSubjects { get; set; }
+
     }
 }
