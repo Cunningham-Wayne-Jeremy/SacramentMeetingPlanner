@@ -66,13 +66,7 @@
                 @Html.DisplayNameFor(model => model.Meeting[0].IntermediateHymnNumber)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].FirstSpeaker)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].SecondSpeaker)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].YouthSpeaker)
+                @Html.DisplayNameFor(model => model.Meeting[0].Speakers)
             </th>
             <th></th>
         </tr>
@@ -120,13 +114,7 @@
                 @Html.DisplayFor(modelItem => item.IntermediateHymnNumber)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FirstSpeaker)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SecondSpeaker)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.YouthSpeaker)
+                @Html.DisplayFor(modelItem => item.Speakers)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
