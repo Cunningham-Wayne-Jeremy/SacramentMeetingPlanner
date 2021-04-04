@@ -8,18 +8,15 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using SacramentMeetingPlanner.Data;
 using SacramentMeetingPlanner.Models;
 
-namespace SacramentMeetingPlanner.Pages.Meetings
+namespace SacramentMeetingPlanner.Pages.Speakers
 {
     public class CreateModel : PageModel
     {
-        private readonly SacramentMeetingPlanner.Data.SacramentMeetingPlannerContext _context;
-        private readonly SpeakerContext _speakerContext;
+        private readonly SacramentMeetingPlanner.Data.SpeakerContext _context;
 
-        public CreateModel(SacramentMeetingPlanner.Data.SacramentMeetingPlannerContext context,
-            SacramentMeetingPlanner.Data.SpeakerContext speakercontext)
+        public CreateModel(SacramentMeetingPlanner.Data.SpeakerContext context)
         {
             _context = context;
-            _speakerContext = speakercontext;
         }
 
         public IActionResult OnGet()
@@ -28,10 +25,8 @@ namespace SacramentMeetingPlanner.Pages.Meetings
         }
 
         [BindProperty]
-        public Meeting Meeting { get; set; }
-
-        [BindProperty]
         public Speaker Speaker { get; set; }
+
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
@@ -39,10 +34,8 @@ namespace SacramentMeetingPlanner.Pages.Meetings
             {
                 return Page();
             }
-            _speakerContext.Speaker.Add(Speaker);
-            await _speakerContext.SaveChangesAsync();
 
-            _context.Meeting.Add(Meeting);
+            _context.Speaker.Add(Speaker);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

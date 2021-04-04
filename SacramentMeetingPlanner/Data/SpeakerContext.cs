@@ -7,14 +7,13 @@ using SacramentMeetingPlanner.Models;
 
 namespace SacramentMeetingPlanner.Data
 {
-    public class SacramentMeetingPlannerContext : DbContext
+    public class SpeakerContext : DbContext
     {
-        public SacramentMeetingPlannerContext (DbContextOptions<SacramentMeetingPlannerContext> options)
+        public SpeakerContext (DbContextOptions<SpeakerContext> options)
             : base(options)
         {
         }
 
-        public DbSet<SacramentMeetingPlanner.Models.Meeting> Meeting { get; set; }
+        public DbSet<SacramentMeetingPlanner.Models.Speaker> Speaker { get; set; }
     }
-
 }
