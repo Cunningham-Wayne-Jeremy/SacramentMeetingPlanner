@@ -10,7 +10,7 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-dark table-striped table-hover">
     <thead>
         <tr>
             <th>
@@ -20,55 +20,12 @@
                 @Html.DisplayNameFor(model => model.Meeting[0].Date)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].Conducting)
-            </th>
-            <td>
-                <table>
-                    <tr>
-                        <th> Prayers
-                            <tr>
-                                <td>
-                                    @Html.DisplayNameFor(model => model.Meeting[0].Invocation)
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    @Html.DisplayNameFor(model => model.Meeting[0].Benediction)
-                                </td>
-                            </tr>
-                        </th>
-                    </tr>
-                </table>
-            </td>
-            <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].OpeningHymn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].OpeningHymnNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].SacramentHymn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].SacramentHymnNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].ClosingHymn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].ClosingHymnNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].IntermediateHymn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meeting[0].IntermediateHymnNumber)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Meeting[0].Speakers)
             </th>
-            <th></th>
+            <th>
+                Make Edits
+            </th>
+
         </tr>
     </thead>
     <tbody>
@@ -79,39 +36,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Conducting)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Invocation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Benediction)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OpeningHymn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OpeningHymnNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SacramentHymn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SacramentHymnNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClosingHymn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClosingHymnNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IntermediateHymn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IntermediateHymnNumber)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Speakers)
