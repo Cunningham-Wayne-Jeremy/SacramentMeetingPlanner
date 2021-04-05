@@ -65,7 +65,6 @@ namespace SacramentMeetingPlanner.Models
         [Required]
         public int IntermediateHymnNumber { get; set; }
 
-        [Display(Name = "Speaker")]
-        public List<Speaker> Speakers { get; set; }
+        public string Speakers { get; set; }
     }
 }

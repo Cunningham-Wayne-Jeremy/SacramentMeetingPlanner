@@ -26,7 +26,6 @@ namespace SacramentMeetingPlanner.Pages.Meetings
 
         [BindProperty]
         public Meeting Meeting { get; set; }
-
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
@@ -34,7 +33,6 @@ namespace SacramentMeetingPlanner.Pages.Meetings
             {
                 return Page();
             }
-
             _context.Meeting.Add(Meeting);
             await _context.SaveChangesAsync();
 
