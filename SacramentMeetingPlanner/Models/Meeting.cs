@@ -58,13 +58,11 @@ namespace SacramentMeetingPlanner.Models
 
         [Display(Name = "Intermediate Hymn")]
         [RegularExpression(@"^[A-Z ]+[a-zA-Z ]*$")]
-        [Required]
         public string IntermediateHymn { get; set; }
 
         [Display(Name = "Hymn #")]
-        [Required]
-        public int IntermediateHymnNumber { get; set; }
-
+        public int? IntermediateHymnNumber { get; set; }
+        [RegularExpression(@"^[A-Z ,]+[a-zA-Z ,]*$")]
         public string Speakers { get; set; }
     }
 }
