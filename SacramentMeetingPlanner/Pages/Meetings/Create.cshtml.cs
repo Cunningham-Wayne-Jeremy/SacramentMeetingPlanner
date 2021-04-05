@@ -13,13 +13,10 @@ namespace SacramentMeetingPlanner.Pages.Meetings
     public class CreateModel : PageModel
     {
         private readonly SacramentMeetingPlanner.Data.SacramentMeetingPlannerContext _context;
-        private readonly SpeakerContext _speakerContext;
 
-        public CreateModel(SacramentMeetingPlanner.Data.SacramentMeetingPlannerContext context,
-            SacramentMeetingPlanner.Data.SpeakerContext speakercontext)
+        public CreateModel(SacramentMeetingPlanner.Data.SacramentMeetingPlannerContext context)
         {
             _context = context;
-            _speakerContext = speakercontext;
         }
 
         public IActionResult OnGet()
@@ -29,9 +26,6 @@ namespace SacramentMeetingPlanner.Pages.Meetings
 
         [BindProperty]
         public Meeting Meeting { get; set; }
-
-        [BindProperty]
-        public Speaker Speaker { get; set; }
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
@@ -39,9 +33,6 @@ namespace SacramentMeetingPlanner.Pages.Meetings
             {
                 return Page();
             }
-            _speakerContext.Speaker.Add(Speaker);
-            await _speakerContext.SaveChangesAsync();
-
             _context.Meeting.Add(Meeting);
             await _context.SaveChangesAsync();
 

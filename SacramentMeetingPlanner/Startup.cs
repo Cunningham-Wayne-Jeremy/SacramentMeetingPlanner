@@ -29,9 +29,6 @@ namespace SacramentMeetingPlanner
 
             services.AddDbContext<SacramentMeetingPlannerContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("SacramentMeetingPlannerContext")));
-
-            services.AddDbContext<SpeakerContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("SpeakerContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
