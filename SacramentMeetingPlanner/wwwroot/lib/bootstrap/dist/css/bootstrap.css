@@ -73,7 +73,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     transition: all 0.3s;
 }
 
-    #sidebar.active {
+#sidebar.active {
         margin-left: -250px;
     }
 
@@ -98,16 +98,78 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
         display: block;
     }
 
-        #sidebar ul li a:hover {
-            color: #7386D5;
-            background: #fff;
-        }
+#sidebar ul li a:hover {
+      color: #7386D5;
+      background: #fff;
+}
 
     #sidebar ul li.active > a,
     a[aria-expanded="true"] {
         color: #fff;
         background: #6d7fcc;
     }
+
+.create-new {
+    color: #fff;
+    background-color: #726DA8;
+    border-color: #59548C;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+    
+}
+
+.create-new:hover {
+    color: #fff;
+}
+
+.extra-margin {
+    margin-top: 30px;
+}
+
+.btn-submit {
+    width: 250px;
+}
+
+.group {
+    margin: 20px 0px;
+    box-shadow: 1px 1px 10px grey;
+    border: 1px solid #F4FAFF;
+    padding: 5px;
+}
+
+.required:after {
+    content: "*";
+    color: red;
+}
+
+.back {
+    color: #fff;
+    background-color: #8789C0;
+    border-color: #59548C;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+}
+
+
+.back:hover {
+    color: #000;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 325px 250px;
+    column-gap: 50px;
+}
+
+.edit {
+    color: #fff;
+    background-color: #726DA8;
+    border-color: #59548C;
+    padding: 10px;
+    border-radius: 5px;
+}
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -496,7 +558,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
+    font-family: "Zilla Slab Highlight", cursive;
 }
 
 h2, .h2 {
