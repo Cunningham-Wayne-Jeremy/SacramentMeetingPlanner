@@ -12,6 +12,7 @@ namespace SacramentMeetingPlanner.Models
 
         [RegularExpression(@"^[A-Z ]+[a-zA-Z ]*$")]
         [Required]
+   
         public string Subject { get; set; }
 
         [DataType(DataType.Date)]
@@ -34,7 +35,7 @@ namespace SacramentMeetingPlanner.Models
         [Required]
         public string OpeningHymn { get; set; }
 
-        [Display(Name = "Hymn #")]
+        [Display(Name = "Opening Hymn #")]
         [Required]
         public int OpeningHymnNumber { get; set; }
 
@@ -43,7 +44,7 @@ namespace SacramentMeetingPlanner.Models
         [Required]
         public string SacramentHymn { get; set; }
 
-        [Display(Name = "Hymn #")]
+        [Display(Name = "Sacrament Hymn #")]
         [Required]
         public int SacramentHymnNumber { get; set; }
 
@@ -52,7 +53,7 @@ namespace SacramentMeetingPlanner.Models
         [Required]
         public string ClosingHymn { get; set; }
 
-        [Display(Name = "Hymn #")]
+        [Display(Name = "Closing Hymn #")]
         [Required]
         public int ClosingHymnNumber { get; set; }
 
@@ -60,7 +61,7 @@ namespace SacramentMeetingPlanner.Models
         [RegularExpression(@"^[A-Z ]+[a-zA-Z ]*$")]
         public string IntermediateHymn { get; set; }
 
-        [Display(Name = "Hymn #")]
+        [Display(Name = "Intermediate Hymn #")]
         public int? IntermediateHymnNumber { get; set; }
         [RegularExpression(@"^[A-Z ,]+[a-zA-Z ,]*$")]
         public string Speakers { get; set; }

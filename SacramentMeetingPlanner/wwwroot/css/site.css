@@ -22,12 +22,15 @@ a {
 }
 
 .edits {
-    color: #5e94ff;
+    background-color: #F4FAFF;
+    padding: 5px 10px;
+    color: #726DA8;
 }
 
-.edits:hover {
-    color: #ffe15e;
-}
+    .edits:hover {
+        color: #F4FAFF;
+        background-color: #1D201F;
+    }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
